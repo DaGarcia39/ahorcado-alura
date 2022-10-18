@@ -12,26 +12,16 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <header>
-            <img src="src/img/logo.svg" alt="logo Alura" class="logo" />
-        </header>
-        <main>
-            <article>
-                <section id="section-disable" class="buttons-home">
-                    <button
-                        class="btn-start"
-                        id="start-game"
-                        onclick="startGame()"
-                    >
-                        Iniciar juego
-                    </button>
-                </section>
-                <section id="section-able" class="canvas">
-                    <canvas id="forca" width="1200" height="860"></canvas>
-                    <section class="underline"></section>
-                </section>
-            </article>
-        </main>
+        <img src="src/img/logo.svg" alt="logo Alura" class="logo" />
+        <section id="section-disable" class="buttons-home">
+            <a class="btn-start" id="start-game" onclick="startGame()">
+                Iniciar juego
+            </a>
+        </section>
+        <section id="section-able" class="canvas">
+            <canvas id="forca" width="1200" height="860"></canvas>
+            <section class="underline"></section>
+        </section>
         <script src="js/horca.js"></script>
         <script src="js/canvas.js"></script>
     </body>
