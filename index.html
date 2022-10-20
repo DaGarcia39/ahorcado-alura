@@ -14,13 +14,58 @@
     <body>
         <img src="src/img/logo.svg" alt="logo Alura" class="logo" />
         <section id="section-disable" class="buttons-home">
-            <a class="btn-start" id="start-game" onclick="startGame()">
-                Iniciar juego
-            </a>
+            <a class="btn-start" id="start-game"> Iniciar juego </a>
+            <button
+                class="btn-letter"
+                id="new-letter"
+                onclick="showScreenAddWord()"
+            >
+                Agregar palabra
+            </button>
+        </section>
+        <section id="add-word" class="new-letter">
+            <input
+                class="text-input"
+                id="input-new-word"
+                type="text"
+                placeholder="Escriba una nueva palabra"
+            />
+            <section class="form-group">
+                <img src="src/img/!.png" alt="img-alert" />
+                <label for="text-input">Max 8 caracteres</label>
+            </section>
+            <section class="buttons-section">
+                <input
+                    type="submit"
+                    class="btn-blue"
+                    value="Guardar y empezar"
+                    id="btn-save"
+                />
+                <input
+                    type="submit"
+                    class="btn-white"
+                    value="Cancelar"
+                    id="btn-cancel"
+                />
+            </section>
         </section>
         <section id="section-able" class="canvas">
             <canvas id="forca" width="1200" height="860"></canvas>
             <section class="underline"></section>
+            <section class="buttons-section-canvas">
+                <input
+                    type="submit"
+                    class="btn-blue"
+                    value="Nuevo juego"
+                    id="btn-new-game"
+                />
+                <input
+                    type="submit"
+                    class="btn-white"
+                    value="Salir"
+                    id="btn-exit"
+                />
+            </section>
         </section>
         <script src="js/horca.js"></script>
         <script src="js/canvas.js"></script>
