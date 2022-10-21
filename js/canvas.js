@@ -99,6 +99,7 @@ function loseGame() {
     board.lineJoin = "round";
     board.fillStyle = "red";
     board.fillText("Fin del juego!", 900, 320);
+    board.fillText(`La palabra era: ${secretWord}`, 100, 320);
 }
 
 function winGame() {
