@@ -1,4 +1,4 @@
-let screen = document.querySelector("canvas");
+let screen = (document.querySelector("canvas").style.display = "none");
 let buttonNewGame = (document.getElementById("btn-new-game").style.display =
     "none");
 let btnExitVanish = (document.getElementById("btn-exit").style.display =
@@ -112,12 +112,20 @@ function saveWord() {
 
 function startGame() {
     document.getElementById("section-disable").style.display = "none";
+    document.querySelector("canvas").style.display = "flex";
+
+    // style canvas
+    document.getElementById("section-able").style.display = "flex";
+    document.getElementById("section-able").style.flexDirection = "column";
+    document.getElementById("section-able").style.alignItems = "center";
+    document.getElementById("section-able").style.justifyContent = "center";
+
     drawCanvas();
     chooseCorrectWord();
     drawLine();
 
-    document.getElementById("btn-new-game").style.display = "block";
-    document.getElementById("btn-exit").style.display = "block";
+    document.getElementById("btn-new-game").style.display = "flex";
+    document.getElementById("btn-exit").style.display = "flex";
 
     document.onkeydown = (e) => {
         let letter = e.key.toUpperCase();
